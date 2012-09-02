@@ -1,0 +1,18 @@
+<h1>Pad Hacker</h1>
+<h3><%= link_to "Get Latest Results", new_listing_path %></h3>
+<table id="listings">
+	<th>Description</th>
+	<th>Info</th>
+	<th>Location</th>
+	<th>Price per Bedroom</th>
+	<% @listings.each do |listing| %>
+		<tr>
+		<td><a href="<%= listing.link %>"><%= listing.description %></a></td>
+		<td>Date: <%= listing.date %> || 
+		Price: <%= number_to_currency(listing.price) %> || 
+		Bedrooms: <%= listing.beds %></td>
+		<td><%= listing.location %></td>
+		<td><div style="font-weight: bold"><%= number_to_currency(listing.price_per_bedroom) %></div>
+		</div></td></tr>
+	<% end %>
+</table>
