@@ -2,10 +2,7 @@
 <h3><%= link_to "Get Latest Results", new_listing_path %></h3>
 <div class="search-form">
 	<%= search_form_for @search do |f| %>
-		<div class="field">
-			<%= f.label :location_cont, "Location Contains:" %>
-			<%= f.text_field :location_cont %>
-		</div>
+    <%= render 'checkboxes', :f => f %>
 		<div class="field">
 			<%= f.label :price_per_bedroom_gteq, "Price per bedroom between:" %>
 			<%= f.text_field :price_per_bedroom_gteq %>
