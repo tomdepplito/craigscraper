@@ -1,5 +1,26 @@
 <h1>Pad Hacker</h1>
 <h3><%= link_to "Get Latest Results", new_listing_path %></h3>
+<div class="seach-form">
+	<%= search_form_for @search do |f| %>
+		<div class="field">
+			<%= f.label :location_cont, "Location Contains:" %>
+			<%= f.text_field :location_cont %>
+		</div>
+		<div class="field">
+			<%= f.label :price_per_bedroom_gteq, "Price per bedroom between:" %>
+			<%= f.text_field :price_per_bedroom_gteq %>
+			<%= f.label :price_per_bedroom_lteq, "and" %>
+			<%= f.text_field :price_per_bedroom_lteq %>
+			</div>
+		<div class="field">
+			<%= f.label :beds_gteq, "Number of bedrooms between:" %>
+			<%= f.text_field :beds_gteq %>
+			<%= f.label :beds_lteq, "and" %>
+			<%= f.text_field :beds_lteq %>
+		</div>
+		<div class="actions"><%= f.submit "Search" %></div>
+	<% end %>
+</div>
 <table id="listings">
 	<th>Description</th>
 	<th>Info</th>

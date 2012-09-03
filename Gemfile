@@ -4,6 +4,7 @@ gem 'rails', '3.2.7'
 gem 'uglifier', '>= 1.0.3'
 gem 'jquery-rails'
 gem 'nokogiri'
+gem 'ransack'
 
 group :production do
   gem 'pg'
