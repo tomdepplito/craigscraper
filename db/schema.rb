@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120902215916) do
+ActiveRecord::Schema.define(:version => 20120904230228) do
 
   create_table "listings", :force => true do |t|
     t.string   "date"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(:version => 20120902215916) do
     t.datetime "updated_at",        :null => false
     t.float    "price_per_bedroom"
     t.string   "location"
+    t.string   "gmap_url"
   end
 
 end

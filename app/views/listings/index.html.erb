@@ -29,7 +29,11 @@
 		<td>Date: <%= listing.date %> || 
 		Price: <%= number_to_currency(listing.price) %> || 
 		Bedrooms: <%= listing.beds %></td>
-		<td><%= listing.location %></td>
+		<td><% if listing.gmap_url %>
+				<a href="<%= listing.gmap_url %>"><%= listing.location %></a>
+			<% else %>
+				<%= listing.location %>
+			<% end %></td>
 		<td><div style="font-weight: bold"><%= number_to_currency(listing.price_per_bedroom) %></div>
 		</div></td></tr>
 	<% end %>
